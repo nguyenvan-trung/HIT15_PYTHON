@@ -1,23 +1,17 @@
-n = int(input("so luong hoc sinh: "))
+n =  int(input("nhap n: "))
+m = int(input("nhap m: "))
 
-for i in range(n):
-    print("Nhap ten: ")
-    ten = input()
-    
-    print("nhap diem 1: ")
-    x = int(input())
-    
-    print("nhap diem 2: ")
-    y = int(input())
-    
-    tong_diem = x + y
-    if tong_diem < 100:
-        xep_loai = "yeu"
-    elif 100 <= tong_diem < 150:
-        xep_loai = "kha"
-    elif 150 <= tong_diem < 190:
-        xep_loai = "gioi"
-    else:
-        xep_loai = "xuat xac"
-    
-    print(f"{i + 1}: {ten} - Tong diem: {tong_diem} - Xep loai: {xep_loai}")
+nums1 =  [input("P: ") for _ in range(n)]
+nums2 =  [input("S: ") for _ in range(m)]
+def tim(a,b):
+    lst =  []
+    for i in a[::-1]:
+        for j in b[::-1]:
+            if i == j:
+                lst.append(i)
+                a.remove(i)
+                b.remove(j)
+                break
+    return lst
+
+print(f'ham la:{tim(nums1, nums2)}')

@@ -1,29 +1,19 @@
-n =  int(input("so luong kg ma loai thu i can: "))
-sum = 0
-li = []
-r = 4
-inr = -1
-l = 101
-inl =  -1
-for i in range(n):
-    x = int(input())
-    li.append(x)
-    if 5 <=  x <= 100:
-        if r <= x: 
-            r = x
-            inr = i
-        if l >= x: 
-            l = x
-            inl = i
+n = int(input("Nhập n: "))
+k = int(input("Nhập k: "))
+a = [int(input(f"Nhập P{i + 1}: ")) for i in range(n)]
+a.sort()
 
-for i in range(n):
-    if li[i] < 5:
-        print(f"loai {i+1}: an it")
-    elif li[i] > 100:
-        print(f"loai {i+1}: an nhieu")
+l = 0
+r = n - 1
+
+while l <= r:
+    mid = (l + r) // 2  
+    if a[mid] < k:
+        l = mid + 1
     else:
-        sum += li[i]
-        print(f"loai {i+1}: an trung binh")
-print(f"tong thuc an cho cac loai dc tinh la : {sum}")
-print(f"loai co suc an nho nhat la:{inl} an {l}")
-print(f"loai co suc an lon nhat la:{inr} an {r}")
+        r = mid - 1  
+
+if l < n and a[l] == k:
+    print(f'Vị trí là {l} có giá trị {a[l]}')
+else:
+    print('Không tìm được')
