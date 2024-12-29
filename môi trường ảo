@@ -1,0 +1,55 @@
+Bước 1: Tạo môi trường ảo
+
+Đầu tiên, bạn cần tạo một môi trường ảo để cách ly các gói (packages) và thư viện. Để làm điều này, bạn sử dụng công cụ venv có sẵn trong Python.
+
+    Mở terminal hoặc command prompt.
+    Di chuyển đến thư mục mà bạn muốn tạo môi trường ảo.
+    Chạy lệnh sau để tạo môi trường ảo:
+
+python -m venv myenv
+
+Trong đó, myenv là tên của môi trường ảo bạn muốn tạo. Bạn có thể thay đổi tên này nếu muốn.
+Bước 2: Kích hoạt môi trường ảo
+
+Sau khi tạo môi trường ảo, bạn cần kích hoạt nó.
+
+    Trên Windows:
+
+myenv\Scripts\activate
+
+    Trên macOS và Linux:
+
+source myenv/bin/activate
+
+Sau khi kích hoạt, bạn sẽ thấy tên môi trường ảo (ví dụ: myenv) xuất hiện trong prompt của terminal, cho biết bạn đang làm việc trong môi trường ảo.
+Bước 3: Cài đặt các thư viện cần thiết
+
+Sau khi đã kích hoạt môi trường ảo, bạn cần cài đặt các thư viện mà bạn muốn sử dụng (ví dụ: NumPy, pandas, etc.).
+
+Cài đặt NumPy bằng lệnh:
+
+pip install numpy
+
+Bước 4: Chạy mã Python trong môi trường ảo
+
+Bây giờ bạn có thể chạy mã Python trong môi trường ảo. Đảm bảo rằng bạn đang ở trong thư mục chứa mã nguồn của bạn hoặc mở mã đó bằng trình soạn thảo code.
+
+Bạn có thể chạy mã trong môi trường ảo bằng cách:
+
+python your_script.py
+
+Bước 5: Deactivate (Thoát) môi trường ảo
+
+Khi bạn hoàn thành công việc, bạn có thể thoát khỏi môi trường ảo bằng cách sử dụng lệnh:
+
+deactivate
+
+Tổng kết:
+
+Các bước cơ bản để chạy mã trong môi trường ảo:
+
+    Tạo môi trường ảo: python -m venv myenv
+    Kích hoạt môi trường: source myenv/bin/activate (Linux/macOS) hoặc myenv\Scripts\activate (Windows)
+    Cài đặt thư viện: pip install numpy
+    Chạy mã: python your_script.py
+    Thoát môi trường: deactivate
